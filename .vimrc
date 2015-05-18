@@ -76,16 +76,16 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 set list
 set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%,eol:$
 
-function! ZenkakuSpace()
-	highlight ZenkakuSpace cterm=reverse ctermfg=lightblue guibg=darkgray
+function! UltraDoubleSpace()
+	highlight UltraDoubleSpace cterm=reverse ctermfg=lightblue guibg=darkgray
 endfunction
 if has('syntax')
-	augroup ZenkakuSpace
+	augroup UltraDoubleSpace
 		autocmd!
-		autocmd ColorScheme * call ZenkakuSpace()
-		autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
+		autocmd ColorScheme * call UltraDoubleSpace()
+		autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('UltraDoubleSpace', '　')
 	augroup END
-	call ZenkakuSpace()
+	call UltraDoubleSpace()
 endif
 
 "----------close html tag
