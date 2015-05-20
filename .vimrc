@@ -22,7 +22,7 @@ set smarttab
 "how many spaces insert
 set shiftwidth=4
 "enable to insert spaces with tab key when insert mode
-set noexpandtab
+set expandtab
 "1 tab = tabstop value size
 set tabstop=4
 "input same indent automatically after line break
