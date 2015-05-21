@@ -7,6 +7,9 @@ set t_Co=256
 "----------complement file name in command line mode
 set wildmenu
 
+"----------status
+set laststatus=2
+
 "----------search
 "search both upper and lower with lowercases
 set smartcase
@@ -181,6 +184,8 @@ NeoBundle 'Yggdroot/indentLine'
 "snippet data
 NeoBundle 'honza/vim-snippets'
 
+"status/tab line
+NeoBundle 'itchyny/lightline.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -221,3 +226,14 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#333333'
 let g:indentLine_char = '|'
+
+"lightline settings
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'component': {
+    \   'modified': '%{&filetype=="help"?":&modified?"+":&modifiable?":"-"}'
+    \ },
+    \ 'component_visible_condition': {
+    \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+    \ },
+    \ }
