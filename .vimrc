@@ -178,6 +178,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 "display indent line(may invalidate some syntax)
 NeoBundle 'Yggdroot/indentLine'
 
+"snippet data
+NeoBundle 'honza/vim-snippets'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -212,6 +215,7 @@ smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : 
 if has('conceal')
 	set conceallevel=2 concealcursor=i
 endif
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 "indentLine settings
 let g:indentLine_color_term = 239
