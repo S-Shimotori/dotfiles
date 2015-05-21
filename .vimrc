@@ -186,6 +186,9 @@ NeoBundle 'honza/vim-snippets'
 
 "status/tab line
 NeoBundle 'itchyny/lightline.vim'
+
+"highlight search
+NeoBundle 'haya14busa/incsearch.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -237,3 +240,8 @@ let g:lightline = {
     \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
     \ },
     \ }
+
+"incsearch settings
+map /   <Plug>(incsearch-forward)
+map ?   <Plug>(incsearch-backward)
+map g/  <Plug>(incsearch-stay)
