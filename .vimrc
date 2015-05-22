@@ -190,6 +190,16 @@ NeoBundle 'itchyny/lightline.vim'
 "highlight search
 NeoBundle 'haya14busa/incsearch.vim'
 call neobundle#end()
+
+"syntax for markdown
+NeoBundle 'plasticboy/vim-markdown'
+
+"preview markdown
+NeoBundle 'kannokanno/previm'
+
+"open browser
+NeoBundle 'tyru/open-browser.vim'
+
 filetype plugin indent on
 NeoBundleCheck
 
@@ -248,3 +258,10 @@ let g:lightline = {
 map /   <Plug>(incsearch-forward)
 map ?   <Plug>(incsearch-backward)
 map g/  <Plug>(incsearch-stay)
+
+"previm settings
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+let g:previm_open_cmd = 'open -a Google\ Chrome'
