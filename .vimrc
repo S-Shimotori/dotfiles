@@ -163,7 +163,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'derekwyatt/vim-scala'
 
 "syntax for swift
-NeoBundle 'Keithbsmiley/swift.vim'
+NeoBundle 'keith/swift.vim'
 
 "syntax for haskell
 NeoBundle 'dag/vim2hs'
