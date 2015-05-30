@@ -200,6 +200,9 @@ NeoBundle 'kannokanno/previm'
 "open browser
 NeoBundle 'tyru/open-browser.vim'
 
+"for latex
+NeoBundle 'vim-latex/vim-latex'
+
 filetype plugin indent on
 NeoBundleCheck
 
