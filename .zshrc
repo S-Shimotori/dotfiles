@@ -5,7 +5,7 @@ export PATH="~/bin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-
+eval `/usr/libexec/path_helper -s`
 # pdf preview
 alias pdf='open -a Preview'
 alias MacVim='open -a MacVim'
