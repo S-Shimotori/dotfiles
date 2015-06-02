@@ -16,6 +16,9 @@ set smartcase
 "start searching when input one character
 set incsearch
 
+"----------yank or cut text and set *register
+set clipboard+=unnamed
+
 "----------enable to delete with backspace key
 set backspace=indent,eol,start
 
