@@ -189,7 +189,6 @@ NeoBundle 'itchyny/lightline.vim'
 
 "highlight search
 NeoBundle 'haya14busa/incsearch.vim'
-call neobundle#end()
 
 "syntax for markdown
 NeoBundle 'plasticboy/vim-markdown'
@@ -203,6 +202,7 @@ NeoBundle 'tyru/open-browser.vim'
 "for latex
 NeoBundle 'vim-latex/vim-latex'
 
+call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
