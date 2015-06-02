@@ -98,3 +98,6 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 watch="all"
 log
 setopt ignore_eof
+
+# for syntax highlight
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
