@@ -71,6 +71,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt share_history
 
+# confirm before rm *
+setopt rmstar_wait
+
 ## Prompt ###
 autoload -U colors
 colors
