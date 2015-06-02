@@ -7,7 +7,6 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 eval `/usr/libexec/path_helper -s`
 # pdf preview
-alias pdf='open -a Preview'
 alias MacVim='open -a MacVim'
 # コマンドライン中コメント
 setopt interactive_comments
