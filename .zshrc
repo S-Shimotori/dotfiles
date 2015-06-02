@@ -104,4 +104,4 @@ log
 setopt ignore_eof
 
 # for syntax highlight
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
