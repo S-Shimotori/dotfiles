@@ -49,7 +49,8 @@ setopt hist_reduce_blanks
 setopt extended_glob
 setopt hist_no_store
 alias history-all='history -n 1'
-bindkey '^R' history-incremental-pattern-search-backward
+bindkey "^r" history-incremental-pattern-search-backward
+bindkey "^s" history-incremental-pattern-search-forward
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end \
     history-search-end
