@@ -11,6 +11,9 @@ alias MacVim='open -a MacVim'
 # コマンドライン中コメント
 setopt interactive_comments
 
+# prevent delete files
+alias rm='rm -i'
+
 # brew
 if [ -e /usr/local/share/zsh-completions ]; then
 	fpath=(/usr/local/share/zsh-completions $fpath)
