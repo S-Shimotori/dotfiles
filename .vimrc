@@ -4,6 +4,9 @@ syntax on
 "use 256 colors
 set t_Co=256
 
+"----------filetype
+let g:filetype_m = 'objc'
+
 "----------complement file name in command line mode
 set wildmenu
 
