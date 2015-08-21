@@ -1,4 +1,3 @@
-
 "----------Neobundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -16,7 +15,40 @@ else
    NeoBundle 'Shougo/neocomplcache.vim'
 endif
 if s:meet_neocomplete_requirements()
-"neocomplete
+   let g:acp_enableAtStartup = 0
+   let g:neocomplete#enable_at_startup = 1
+   let g:neocomplete#enable_smart_case = 1
+   let g:neocomplete#sources#syntax#min_keyword_length = 3
+   let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+   let g:neocomplete#sources#dictionary#dictionaries = {
+       \ 'default' : '',
+       \ 'vimshell' : $HOME.'.vimshell_hist',
+       \ 'scheme' : $HOME.'/.gosh_completions'
+           \ }
+   if !exists('g:neocomplete#keyword_patterns')
+       let g:neocomplete#keyword_patterns = {}
+   endif
+   let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+   inoremap <expr><C-g> neocomplete#undo_completion()
+   inoremap <expr><C-l> neocomplete#complete_common_string()
+   inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+   function! s:my_cr_function()
+       return neocomplete#close_popup() . "\<CR>"
+   endfunction
+   inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+   inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+   inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+   inoremap <expr><C-y> neocomplete#close_popup()
+   inoremap <expr><C-e> neocomplete#cancel_popup()
+   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+   if !exists('g:neocomplete#sources#omni#input_patterns')
+       let g:neocomplete#sources#omni#input_patterns = {}
+   endif
+   let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 else
    let g:neocomplcache_enable_at_startup = 1
    let g:neocomplcache_enable_smart_case = 1
@@ -107,88 +139,3 @@ NeoBundle 'vim-latex/vim-latex'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-
-"----------plugin settings
-
-"hl_matchit settings
-let g:hl_matchit_enable_on_vim_startup = 1
-let g:hl_matchit_hl_groupname = 'Title'
-let g:hl_matchit_allow_ft = 'html\|php\|vim\|ruby\|sh'
-
-"html5 settings
-let g:html5_event_handler_attributes_complete = 1
-let g:html5_rdfa_a_attributes_complete = 1
-let g:html5_microdata_attributes_complete = 1
-let g:html5_aria_attributes_complete = 1
-
-"quickrun(scala) settings
-"not neccessary if quickrun with MacVim
-nnoremap <silent> \r :QuickRun -cmdopt "<CR>
-"output encoding
-set termencoding=utf-8
-
-"neosnippet settings
-imap <C-k>  <Plug>(neosnippet_expand_or_jump)
-smap <C-k>  <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>  <Plug>(neosnippet_expand_target)
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-    \ "\<Plug>(neosnippet_expand_or_jump)"
-    \: pumvisible() ? "<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-    \ "\<Plug>(neosnippet_expand_or_jump)"
-    \: "\<TAB>"
-if has('conceal')
-    set conceallevel=2 concealcursor=niv
-endif
-
-"indentLine settings
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#333333'
-let g:indentLine_char = '|'
-
-"lightline settings
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'component': {
-    \   'modified': '%{&filetype=="help"?":&modified?"+":&modifiable?":"-"}'
-    \ },
-    \ 'component_visible_condition': {
-    \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-    \ },
-    \ }
-
-"incsearch settings
-map /   <Plug>(incsearch-forward)
-map ?   <Plug>(incsearch-backward)
-map g/  <Plug>(incsearch-stay)
-
-"previm settings
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-
-"vim-latex settings
-let g:Tex_AutoFolding = 0
-let g:Tex_Folding = 0
-let g:Tex_ViewRule_pdf = 'open -a Preview.app'
-let g:Tex_ViewRule_ps = 'open'
-let g:Tex_ViewRule_dvi = 'open'
-"for external vimgrep
-"set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Imap_UsePlaceHolders = 1
-let g:Imap_DeleteEmptyPlaceHolders = 1
-let g:Imap_StickyPlaceHolders = 0
-let g:Tex_DefaultTargetFormat = 'pdf'
-"for bibtex
-let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_FormatDependency_pdf = 'dvi,pdf'
-let g:Tex_FormatDependency_ps = 'dvi,ps'
-let g:Tex_CompileRule_dvi = 'platex -synctex=1 -interaction=nonstopmode -file-line-error-style $*'
-let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
-let g:Tex_BibtexFlavor = 'upbibtex'
-let g:Tex_MakeIndexFlavor = 'mendex -U $*.idx'
-let g:Tex_UseEditorSettingInDVIViewer = 1
