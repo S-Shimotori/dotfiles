@@ -6,8 +6,11 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export CATALINA_HOME='/usr/local/Cellar/tomcat/8.0.23/libexec'
+export PATH="/usr/local/var/rbenv/shims:$PATH"
+export RBENV_ROOT=/usr/local/var/rbenv
 
 eval `/usr/libexec/path_helper -s`
+eval "$(rbenv init - zsh)";
 # pdf preview
 alias MacVim='open -a MacVim'
 # コマンドライン中コメント
