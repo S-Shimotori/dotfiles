@@ -8,6 +8,9 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export CATALINA_HOME='/usr/local/Cellar/tomcat/8.0.23/libexec'
 export PATH="/usr/local/var/rbenv/shims:$PATH"
 export RBENV_ROOT=/usr/local/var/rbenv
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
