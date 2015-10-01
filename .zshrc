@@ -11,6 +11,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/llvm/bin
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
