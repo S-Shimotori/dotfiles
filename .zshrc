@@ -15,6 +15,8 @@ export PATH=$PATH:/usr/local/opt/llvm/bin
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
+eval "$(thefuck --alias)"
+
 # pdf preview
 alias MacVim='open -a MacVim'
 # コマンドライン中コメント
