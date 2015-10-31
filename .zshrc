@@ -12,6 +12,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/llvm/bin
+export PATH=$PATH:$HOME/TreeTagger/cmd
+export PATH=$PATH:$HOME/TreeTagger/bin
+export TREETAGGER_BINARY='$HOME/TreeTagger/bin/tree-tagger'
+export TREETAGGER_MODEL='$HOME/TreeTagger/lib/english-utf8.par'
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
