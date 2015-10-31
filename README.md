@@ -3,15 +3,18 @@
 my dotfiles
 
 ## for vim
-```.vimrc``` : import files
 
-* ```init/``` : basic config and plugin list with neobundle
-* ```plugins/``` : plugin's config
+```vim/.vimrc``` : import files
+
+* ```vim/init/``` : basic config and plugin list with neobundle
+* ```vim/plugins/``` : plugin's config
 
 ## for neovim
-``` .nvimrc ```
+
+* ```neovim/init.vim```
 
 ## for zsh
+
 ``` .zshrc ```
 
 * ```zsh-syntax-highlighting``` : color scheme for zsh
