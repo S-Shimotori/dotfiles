@@ -136,6 +136,20 @@ NeoBundle 'tyru/open-browser.vim'
 "for latex
 NeoBundle 'vim-latex/vim-latex'
 
+"interactive command execution
+NeoBundle 'Shougo/vimproc.vim', {
+\   'build' : {
+\       'windows' : 'tools\\update-dll-mingw',
+\       'cygwin' : 'make -f make_cygwin.mak',
+\       'mac' : 'make',
+\       'linux' : 'make',
+\       'unix' : 'gmake',
+\   },
+\ }
+
+"Gauche REPL
+NeoBundle 'aharisu/vim_goshrepl'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
