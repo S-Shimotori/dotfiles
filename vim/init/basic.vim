@@ -5,6 +5,7 @@ syntax on
 set t_Co=256
 
 "----------filetype
+":h filetype-overrule
 let g:filetype_m = 'objc'
 
 "----------complement file name in command line mode
