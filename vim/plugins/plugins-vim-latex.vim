@@ -8,7 +8,7 @@ let g:Tex_ViewRule_dvi = 'open'
 "set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Imap_UsePlaceHolders = 1
-let g:Imap_DeleteEmptyPlaceHolders = 1
+let g:Imap_DeleteEmptyPlaceHolders = 0
 let g:Imap_StickyPlaceHolders = 0
 let g:Tex_DefaultTargetFormat = 'pdf'
 "for bibtex
