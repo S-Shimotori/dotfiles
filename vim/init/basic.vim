@@ -11,7 +11,7 @@ let g:filetype_m = 'objc'
 set wildmenu
 
 "----------emoji complete
-set completefunc=emoji#complete
+"set completefunc=emoji#complete
 
 "----------status
 set laststatus=2
