@@ -16,9 +16,19 @@ export PATH=$PATH:$HOME/TreeTagger/cmd
 export PATH=$PATH:$HOME/TreeTagger/bin
 export TREETAGGER_BINARY='$HOME/TreeTagger/bin/tree-tagger'
 export TREETAGGER_MODEL='$HOME/TreeTagger/lib/english-utf8.par'
+export PATH=$PATH:$HOME/perl5/bin
+export PERL5LIB=$PERL5LIB:$HOME/perl5/lib/perl5
+export PERL_LOCAL_LIB_ROOT=$PERL_LOCAL_LIB_ROOT:$HOME/perl5
+export PERL_MB_OPT="--install_base \"$HOME/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
+if which plenv > /dev/null; then
+    export PLENV_ROOT=$HOME/.plenv
+    export PATH=$PATH:${PLENV_ROOT}/shims
+    eval "$(plenv init - zsh)";
+fi
 eval "$(thefuck --alias)"
 
 # pdf preview
