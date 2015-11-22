@@ -4,7 +4,8 @@ my dotfiles
 
 # install
 
-run ```dotfilesLink.sh```
+~~run ```dotfilesLink.sh```~~  
+run ```make``` with Makefile
 
 # files
 
