@@ -5,4 +5,5 @@ ln -sf ~/dotfiles/vim/plugins/*.vim ~/.vim/userautoload/plugins/
 ln -sf ~/dotfiles/vim/ftplugin/*.vim ~/.vim/ftplugin/
 ln -sf ~/dotfiles/neovim/init.vim ~/.config/nvim/
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.xvimrc ~/.xvimrc
 

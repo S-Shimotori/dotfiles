@@ -1,0 +1,20 @@
+set showmatch
+set clipboard=unnamed
+set backspace=eol,indent,start
+set notitle
+
+"----------search
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wrapscan
+:highlight Search guibg=#72640c
+
+"----------map
+imap [] []<Left>
+imap () ()<Left>
+imap "" ""<Left>
+imap <> <><Left>
+imap {} {}<Left>
+
