@@ -159,6 +159,9 @@ NeoBundle 'mattn/emoji-vim'
 "complete(include emoji)
 "NeoBundle 'rhysd/github-complete.vim'
 
+"git diff
+NeoBundle 'airblade/vim-gitgutter'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
