@@ -21,6 +21,17 @@ export PERL5LIB=$PERL5LIB:$HOME/perl5/lib/perl5
 export PERL_LOCAL_LIB_ROOT=$PERL_LOCAL_LIB_ROOT:$HOME/perl5
 export PERL_MB_OPT="--install_base \"$HOME/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
+export COCOS_CONSOLE_ROOT=$HOME/cocos2d-x-3.9/tools/cocos2d-console/bin
+export PATH=$PATH:$COCOS_CONSOLE_ROOT
+export COCOS_TEMPLATES_ROOT=$HOME/cocos2d-x-3.9/templates
+export PATH=$PATH:$COCOS_TEMPLATES_ROOT
+# duplicate ANDROID_HOME
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.6/bin
+export PATH=$PATH:$ANT_ROOT
+export LC_ALL="ja_JP.UTF-8"
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
@@ -133,3 +144,4 @@ setopt ignore_eof
 
 # for syntax highlight
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
