@@ -20,7 +20,6 @@ set list
 set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%,eol:$
 
 set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-set runtimepath+=~/.config/nvim/deoplete.nvim/
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
