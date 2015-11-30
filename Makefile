@@ -13,8 +13,7 @@ install-vim:
 	ln -sf `pwd`/vim/ftplugin/*.vim ~/.vim/ftplugin/
 
 install-neovim:
-	rm -rf ~/.config/nvim
-	mkdir -p ~/.config/nvim
+	rm -f ~/.config/nvim/init.vim
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
 install-xvim:
