@@ -50,6 +50,8 @@ setopt interactive_comments
 # prevent delete files
 alias rm='rm -i'
 
+alias ks='echo カス👆'
+
 # brew
 if [ -e /usr/local/share/zsh-completions ]; then
 	fpath=(/usr/local/share/zsh-completions $fpath)
