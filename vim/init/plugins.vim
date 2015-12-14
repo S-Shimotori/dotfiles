@@ -162,6 +162,9 @@ NeoBundle 'mattn/emoji-vim'
 "git diff
 NeoBundle 'airblade/vim-gitgutter'
 
+"kotlin
+NeoBundle 'udalov/kotlin-vim'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
