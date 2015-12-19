@@ -32,6 +32,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.6/bin
 export PATH=$PATH:$ANT_ROOT
 export LC_ALL="ja_JP.UTF-8"
+GEM_EXE_DIR=`gem env | grep "EXECUTABLE DIRECTORY" | awk '{print $4}'`
+export PATH=$GEM_EXE_DIR:$PATH
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
