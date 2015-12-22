@@ -16,9 +16,11 @@ install-neovim:
 	rm -f ~/.config/nvim/init.vim
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
-install-xvim:
+install-vim-for-ide:
 	rm -f ~/.xvimrc
-	ln -sf `pwd`/.xvimrc ~/.xvimrc
+	rm -f ~/.ideavimrc
+	ln -sf `pwd`/.idevimrc ~/.xvimrc
+	ln -sf `pwd`/.idevimrc ~/.ideavimrc
 
 install-zsh:
 	git submodule update --init
