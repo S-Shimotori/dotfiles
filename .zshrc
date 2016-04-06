@@ -42,6 +42,9 @@ if which plenv > /dev/null; then
     export PATH=$PATH:${PLENV_ROOT}/shims
     eval "$(plenv init - zsh)";
 fi
+if which swiftenv > /dev/null; then
+    eval "$(swiftenv init -)";
+fi
 eval "$(thefuck --alias)"
 
 # pdf preview
