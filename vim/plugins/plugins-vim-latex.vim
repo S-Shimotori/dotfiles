@@ -17,7 +17,7 @@ let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 let g:Tex_FormatDependency_ps = 'dvi,ps'
 let g:Tex_CompileRule_dvi = 'platex -synctex=1 -interaction=nonstopmode -file-line-error-style $*'
 let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
+let g:Tex_CompileRule_pdf = 'dvipdfmx -p a4 $*.dvi'
 let g:Tex_BibtexFlavor = 'upbibtex'
 let g:Tex_MakeIndexFlavor = 'mendex -U $*.idx'
 let g:Tex_UseEditorSettingInDVIViewer = 1
