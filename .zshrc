@@ -34,6 +34,8 @@ export PATH=$PATH:$ANT_ROOT
 export LC_ALL="ja_JP.UTF-8"
 GEM_EXE_DIR=`gem env | grep "EXECUTABLE DIRECTORY" | awk '{print $4}'`
 export PATH=$GEM_EXE_DIR:$PATH
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export PATH=$PATH:GROOVY_HOME
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
