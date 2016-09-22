@@ -36,6 +36,7 @@ GEM_EXE_DIR=`gem env | grep "EXECUTABLE DIRECTORY" | awk '{print $4}'`
 export PATH=$GEM_EXE_DIR:$PATH
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export PATH=$PATH:GROOVY_HOME
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
