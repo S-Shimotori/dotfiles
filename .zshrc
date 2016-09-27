@@ -37,6 +37,7 @@ export PATH=$GEM_EXE_DIR:$PATH
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export PATH=$PATH:GROOVY_HOME
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/Applications/CMake.app/Contents/bin:$PATH
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
