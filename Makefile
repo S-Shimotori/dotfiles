@@ -1,4 +1,4 @@
-all: install-xvim install-zsh install-vim install-neovim
+all: install-zsh install-vim install-neovim
 
 install-vim:
 	rm -f ~/.vimrc
