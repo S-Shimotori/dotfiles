@@ -36,6 +36,7 @@ GEM_EXE_DIR=`gem env | grep "EXECUTABLE DIRECTORY" | awk '{print $4}'`
 export PATH=$GEM_EXE_DIR:$PATH
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export PATH=$PATH:GROOVY_HOME
+export LLVM_CONFIG=/usr/local/opt/llvm/bin/llvm-config
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
@@ -48,6 +49,9 @@ if which swiftenv > /dev/null; then
     eval "$(swiftenv init -)";
 fi
 eval "$(thefuck --alias)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # pdf preview
 alias MacVim='open -a MacVim'
