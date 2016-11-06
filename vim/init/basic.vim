@@ -15,6 +15,18 @@ set wildmenu
 set spell
 set spelllang=en,cjk
 
+"----------line
+augroup MyAutoGroup
+    autocmd!
+augroup END
+set wrap
+set linebreak
+set showbreak=+\
+if (v:version == 704 && has("patch338")) || v:version >= 705
+    set breakindent
+    autocmd MyAutoGroup BufEnter * set breakindentopt=min:20,shift:0
+endif
+
 "----------emoji complete
 "set completefunc=emoji#complete
 
