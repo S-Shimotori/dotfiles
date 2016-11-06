@@ -165,7 +165,8 @@ NeoBundle 'airblade/vim-gitgutter'
 "kotlin
 NeoBundle 'udalov/kotlin-vim'
 
-"indent
+"text object
+NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-indent'
 
 call neobundle#end()
