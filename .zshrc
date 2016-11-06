@@ -61,6 +61,9 @@ alias rm='rm -i'
 
 alias ks='echo カス👆'
 
+# prolog
+alias swipl='/Applications/SWI-Prolog.app/Contents/MacOS/swipl'
+
 # brew
 if [ -e /usr/local/share/zsh-completions ]; then
 	fpath=(/usr/local/share/zsh-completions $fpath)
