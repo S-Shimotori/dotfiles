@@ -1,4 +1,4 @@
-all: install-xvim install-zsh install-vim install-neovim
+all: install-zsh install-vim install-neovim
 
 install-vim:
 	rm -f ~/.vimrc
@@ -11,6 +11,9 @@ install-vim:
 	ln -sf `pwd`/vim/init/*.vim ~/.vim/userautoload/init/
 	ln -sf `pwd`/vim/plugins/*.vim ~/.vim/userautoload/plugins/
 	ln -sf `pwd`/vim/ftplugin/*.vim ~/.vim/ftplugin/
+	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+	sh ./install.sh
+	rm -f ./install.sh
 
 install-neovim:
 	rm -f ~/.config/nvim/init.vim

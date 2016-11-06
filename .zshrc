@@ -38,6 +38,7 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export PATH=$PATH:GROOVY_HOME
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/Applications/CMake.app/Contents/bin:$PATH
+export LLVM_CONFIG=/usr/local/opt/llvm/bin/llvm-config
 
 eval `/usr/libexec/path_helper -s`
 eval "$(rbenv init - zsh)";
@@ -50,6 +51,9 @@ if which swiftenv > /dev/null; then
     eval "$(swiftenv init -)";
 fi
 eval "$(thefuck --alias)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # pdf preview
 alias MacVim='open -a MacVim'
