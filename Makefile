@@ -17,6 +17,7 @@ install-vim:
 
 install-neovim:
 	rm -f ~/.config/nvim/init.vim
+	mkdir ~/.config/nvim/
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
 install-vim-for-ide:
