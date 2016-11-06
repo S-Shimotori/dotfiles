@@ -165,6 +165,9 @@ NeoBundle 'airblade/vim-gitgutter'
 "kotlin
 NeoBundle 'udalov/kotlin-vim'
 
+"indent
+NeoBundle 'kana/vim-textobj-indent'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
