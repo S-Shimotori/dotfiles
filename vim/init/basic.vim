@@ -11,6 +11,10 @@ let g:filetype_m = 'objc'
 "----------complement file name in command line mode
 set wildmenu
 
+"----------spell check
+set spell
+set spelllang=en,cjk
+
 "----------emoji complete
 "set completefunc=emoji#complete
 
