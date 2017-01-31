@@ -14,6 +14,7 @@ install-vim:
 	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 	sh ./install.sh
 	rm -f ./install.sh
+	mkdir -p ~/.vim/files/info
 
 install-neovim:
 	rm -f ~/.config/nvim/init.vim
