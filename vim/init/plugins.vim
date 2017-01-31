@@ -169,6 +169,9 @@ NeoBundle 'udalov/kotlin-vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-indent'
 
+"TypeScript
+NeoBundle 'leafgarland/typescript-vim'
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
